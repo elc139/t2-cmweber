@@ -4,6 +4,8 @@ Nome: Crístian Marcos Weber
 
 Disciplina: Programação Paralela
 
+Informações adicionais encontradas em [specs.txt](specs.txt) e [results.csv](results.csv)
+
 ## Parte I: Pthreads
 
 1.
@@ -42,7 +44,9 @@ seus resultados parciais.
 
 
 2. tempo sequencial = 11006402 usec
+
     tempo paralelo(2) = 5666549 usec
+    
     speedup(2) = 1.942346
 
 3. A partir dos testes realizados variando o wsize e o número de repetições, em cenários de execução sequencial ou paralela com 2 ou 4 threads, notou-se um speedup
@@ -51,7 +55,7 @@ com o speedup caindo para números entre 1.65 e 1.78 em todos os cenários testa
 
 4. Os dados coletados e utilizados para as seguintes tabelas se encontram em 'results.csv'.
 
-  - Tabela de speedup para execuções com vetor de tamanho 1000000.
+#### Tabela de speedup para execuções com vetor de tamanho 1000000.
 
 | Nthreads inicial |  Nthreads final |  Repetições |  Speedup      | 
 |------------------|-----------------|-------------|---------------| 
@@ -66,7 +70,7 @@ com o speedup caindo para números entre 1.65 e 1.78 em todos os cenários testa
 | 1                | 4               | 4000        | 3.40038245624 | 
 
 
-  - Tabela de speedup para execuções com vetor de tamanho 4000000.
+#### Tabela de speedup para execuções com vetor de tamanho 4000000.
   
 | Nthreads inicial |  Nthreads final |  Repetições |  Speedup      | 
 |------------------|-----------------|-------------|---------------| 
@@ -82,7 +86,7 @@ com o speedup caindo para números entre 1.65 e 1.78 em todos os cenários testa
 
 
 
-  - Tabela de speedup para execuções com vetor de tamanho 4000000.
+#### Tabela de speedup para execuções com vetor de tamanho 4000000.
 
 | Nthreads inicial |  Nthreads final |  Repetições |  Speedup      | 
 |------------------|-----------------|-------------|---------------| 
@@ -102,4 +106,13 @@ o período entre a leitura e escrita de outra thread sobre a mesma variável.
 
 ## Parte II: OpenMP
 
+Os gráficos abaixo comparam o tempo de execução do código [pthreads_dotprod.c](pthreads_dotprod/pthreads_dotprod.c) disponibilizado e do código [omp-dotprod.c](openmp/omp-dotprod.c) implementado utilizando OpenMP. As informações apresentadas são referentes a execuções com 4000 repetições. Como pode ser observado, a diferença entre os tempos de execução das duas implementações é quase nula, porém vale ressaltar que a implementação em OpenMP apresentou um tempo pouco menor em todos os testes realizados.
 
+#### Tempo x Nthreads para 1 milhão de elementos totais
+  ![grafico1mi](graphs/1mi-elem.jpeg)
+
+#### Tempo x Nthreads para 2 milhões de elementos totais
+  ![grafico2mi](graphs/2mi-elem.jpeg)
+  
+#### Tempo x Nthreads para 4 milhões de elementos totais
+  ![grafico4mi](graphs/4mi-elem.jpeg)

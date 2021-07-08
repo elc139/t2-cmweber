@@ -1,0 +1,3 @@
+SO: Ubuntu 14.04 (Oracle VM VirtualBox)
+Processador: Intel Core i5-3470 3.20GHz, 4 Núcleos, 4 Threads
+Memória: 4096MB
